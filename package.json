@@ -1,24 +1,24 @@
 {
-  "name": "nova-proxy",
+  "name": "frei",
   "version": "3.5.3",
   "private": true,
-  "description": "Nova Proxy — all-in-one VLESS/Trojan/Shadowsocks proxy panel on a Cloudflare Worker (D1, users, Telegram bot, WARP, optional backend mode).",
+  "description": "Frei — all-in-one VLESS/Trojan/Shadowsocks proxy panel on a Cloudflare Worker (D1, users, Telegram bot, WARP, optional backend mode).",
   "main": "worker.js",
   "scripts": {
     "deploy": "wrangler deploy"
   },
   "cloudflare": {
-    "label": "Nova Proxy",
+    "label": "Frei",
     "products": ["Workers", "D1"],
     "bindings": {
       "DB": {
-        "description": "The D1 database Nova uses for storage. Cloudflare creates this automatically — keep the default. Nova builds its own tables on first run, no migration needed."
+        "description": "The D1 database Frei uses for storage. Cloudflare creates this automatically — keep the default. Frei builds its own tables on first run, no migration needed."
       },
       "PASSWORD": {
         "description": "Optional. Leave blank — after deploy, open your Worker URL and the **/install** wizard asks you to set an admin password. You can also set it later under Settings → Variables."
       },
       "UUID": {
-        "description": "Optional. Leave blank — Nova auto-derives a UUID. Only set this if you want a specific VLESS UUID."
+        "description": "Optional. Leave blank — Frei auto-derives a UUID. Only set this if you want a specific VLESS UUID."
       }
     }
   },

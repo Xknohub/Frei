@@ -1,12 +1,12 @@
 <div align="center" dir="rtl">
 
-<img src="https://raw.githubusercontent.com/iiviirv/irnova-site/main/brand/nova-logo-badge-round.png" width="70" alt="نوا پروکسی">
+<img src="https://raw.githubusercontent.com/Xknohub/Frei/main/brand/frei-logo-badge-round.png" width="70" alt="Frei">
 
 <div align="left">
   <a href="README.md">🇬🇧 English</a>
 </div>
 
-# 🌟 نوا پروکسی (Nova Proxy)
+# 🌟 فری پروکسی (Frei Proxy)
 
 **یک پروکسی شخصی و ضدسانسور به‌همراه پنل مدیریت، روی یک Cloudflare Worker.**
 
@@ -15,8 +15,8 @@ VLESS · Trojan · Shadowsocks · gRPC · XHTTP روی WebSocket + TLS — با 
 WARP، زنجیره پروکسی و حالت Backend. اجرا روی **پلن رایگان** Cloudflare.
 
 [![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
-[![Version](https://img.shields.io/badge/نسخه-3.6.3-blueviolet?style=for-the-badge)](https://github.com/IRNova/Nova-Proxy)
-[![Stars](https://img.shields.io/github/stars/IRNova/Nova-Proxy?style=for-the-badge&color=0ea5e9)](https://github.com/IRNova/Nova-Proxy)
+[![Version](https://img.shields.io/badge/نسخه-3.6.3-blueviolet?style=for-the-badge)](https://github.com/Xknohub/Frei)
+[![Stars](https://img.shields.io/github/stars/Xknohub/Frei?style=for-the-badge&color=0ea5e9)](https://github.com/Xknohub/Frei)
 
 </div>
 
@@ -26,22 +26,22 @@ WARP، زنجیره پروکسی و حالت Backend. اجرا روی **پلن �
 
 <div align="center">
 
-[![Website](https://img.shields.io/badge/🌐%20سایت-novaproxy.online-0ea5e9?style=for-the-badge)](https://novaproxy.online/)
-[![Telegram Channel](https://img.shields.io/badge/✈️%20کانال%20تلگرام-@irnova__proxy-0ea5e9?style=for-the-badge&logo=telegram)](https://t.me/irnova_proxy)
-[![Telegram Group](https://img.shields.io/badge/👥%20گروه%20تلگرام-@irnovaproxy__group-0ea5e9?style=for-the-badge&logo=telegram)](https://t.me/irnovaproxy_group)
-[![YouTube](https://img.shields.io/badge/▶️%20یوتیوب-@novaproxyir-ff0000?style=for-the-badge&logo=youtube)](https://www.youtube.com/@novaproxyir)
-[![X (Twitter)](https://img.shields.io/badge/𝕏%20شبکه%20ایکس-@irNovaProxy-000000?style=for-the-badge&logo=x)](https://x.com/irNovaProxy)
-[![Instagram](https://img.shields.io/badge/📸%20اینستاگرام-@irnova__proxy-E4405F?style=for-the-badge&logo=instagram)](https://www.instagram.com/irnova_proxy)
+[![Website](https://img.shields.io/badge/🌐%20سایت-freiproxy.online-0ea5e9?style=for-the-badge)](https://freiproxy.online/)
+[![Telegram Channel](https://img.shields.io/badge/✈️%20کانال%20تلگرام-@frei__proxy-0ea5e9?style=for-the-badge&logo=telegram)](https://t.me/freir_proxy)
+[![Telegram Group](https://img.shields.io/badge/👥%20گروه%20تلگرام-@freiproxy__group-0ea5e9?style=for-the-badge&logo=telegram)](https://t.me/freiproxy_group)
+[![YouTube](https://img.shields.io/badge/▶️%20یوتیوب-@freiproxyir-ff0000?style=for-the-badge&logo=youtube)](https://www.youtube.com/@freiproxyir)
+[![X (Twitter)](https://img.shields.io/badge/𝕏%20شبکه%20ایکس-@FreiProxy-000000?style=for-the-badge&logo=x)](https://x.com/FreiProxy)
+[![Instagram](https://img.shields.io/badge/📸%20اینستاگرام-@frei__proxy-E4405F?style=for-the-badge&logo=instagram)](https://www.instagram.com/freir_proxy)
 
 </div>
 
 ---
 
-## 📖 نوا پروکسی چیست؟
+## 📖 فری پروکسی چیست؟
 
-نوا پروکسی یک **پروکسی شخصی و همه‌کاره برای دور زدن سانسور** است که کاملاً روی Cloudflare Workers — **پلن رایگان** — اجرا می‌شود. این پروژه یک پروکسی قدرتمند (VLESS، Trojan، Shadowsocks روی WebSocket/gRPC/XHTTP) را با **پنل مدیریت کامل دوم‌زبانه** در یک Worker واحد ترکیب کرده است.
+فری یک **پروکسی شخصی و همه‌کاره برای دور زدن سانسور** است که کاملاً روی Cloudflare Workers — **پلن رایگان** — اجرا می‌شود. این پروژه یک پروکسی قدرتمند (VLESS، Trojan، Shadowsocks روی WebSocket/gRPC/XHTTP) را با **پنل مدیریت کامل دوم‌زبانه** در یک Worker واحد ترکیب کرده است.
 
-**چیزهایی که نوا را متفاوت می‌کند:**
+**چیزهایی که فری را متفاوت می‌کند:**
 - ⚡ **بدون نیاز به زیرساخت** — بدون VPS، بدون دامنه برای شروع
 - 🌍 **IP تمیز به‌تفکیک ISP** — بهینه‌سازی خودکار برای هر اپراتور ایرانی
 - 👥 **چندکاربره** — لینک اختصاصی با سهمیه، تاریخ انقضا و کنترل روشن/خاموش
@@ -56,36 +56,36 @@ WARP، زنجیره پروکسی و حالت Backend. اجرا روی **پلن �
 
 روش مورد نظر خود را انتخاب کنید:
 
-### 🖥️ Nova Wizard (دسکتاپ)
+### 🖥️ Frei Wizard (دسکتاپ)
 
 نرم‌افزار رسمی دسکتاپ با رابط گرافیکی — بدون نیاز به دانش فنی.
 
-[**→ دانلود Nova Wizard برای ویندوز و لینوکس**](https://github.com/IRNova/Nova-Wizard)
+[**→ دانلود Frei Wizard برای ویندوز و لینوکس**](https://github.com/Xknohub/Frei-Wizard)
 
 ### 🌐 نصب از طریق سایت
 
 به سایت رسمی مراجعه کرده و مراحل گام‌به‌گام را دنبال کنید:
 
-[**→ novaproxy.online/install**](https://novaproxy.online/install)
+[**→ freiproxy.online/install**](https://freiproxy.online/install)
 
 ---
 
 ### 📱 موبایل
 
-- **Android:** **رادار** با ویزارد داخلی برای نصب آسان نوا پروکسی روی کلودفلر — به‌زودی منتشر می‌شود.
+- **Android:** **رادار** با ویزارد داخلی برای نصب آسان فری روی کلودفلر — به‌زودی منتشر می‌شود.
 - **iOS:** در دست توسعه.
 
 ---
 
 ## 🛰 حالت Backend (VLESS + تماس تصویری/صوتی)
 
-Cloudflare Workers نمی‌تواند پروکسی TCP بومی اجرا کند یا ترافیک UDP را مستقیماً مدیریت کند. برای فعال‌سازی این قابلیت‌ها، نوا از **حالت Backend** پشتیبانی می‌کند — ارسال ترافیک به VPS شخصی Xray یا sing-box.
+Cloudflare Workers نمی‌تواند پروکسی TCP بومی اجرا کند یا ترافیک UDP را مستقیماً مدیریت کند. برای فعال‌سازی این قابلیت‌ها، فری از **حالت Backend** پشتیبانی می‌کند — ارسال ترافیک به VPS شخصی Xray یا sing-box.
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/IRNova/Tools/main/nova-backend.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/Xknohub/Frei/main/nova-backend.sh)
 ```
 
-پس از اجرای نصاب، حالت Backend را در پنل نوا فعال کنید (تنظیمات شبکه → حالت Backend) و آدرس VPS خود را وارد کنید.
+پس از اجرای نصاب، حالت Backend را در پنل فری فعال کنید (تنظیمات شبکه → حالت Backend) و آدرس VPS خود را وارد کنید.
 
 ---
 
@@ -100,85 +100,85 @@ bash <(curl -fsSL https://raw.githubusercontent.com/IRNova/Tools/main/nova-backe
 ## 🧬 تفاوت نسخه‌ها (v1 → v2 → v3)
 
 | قابلیت / Feature | v1 | v2 | v3 |
-|------------------|:--:|:--:|:--:|
-| دریافت لینک اشتراک خودکار / Auto subscription link | ✅ | ✅ | ✅ |
-| فرمت Base64 / Base64 format | ✅ | ✅ | ✅ |
+|-----------------|:---:|:---:|:---:|
+| دریافت لینک اشتراک خودکار | ✅ | ✅ | ✅ |
+| فرمت Base64 | ✅ | ✅ | ✅ |
 | Clash / Mihomo | ✅ | ✅ | ✅ |
 | sing-box | ✅ | ✅ | ✅ |
 | Loon | ✅ | ✅ | ✅ |
 | Surge | ✅ | ✅ | ✅ |
-| توزیع بار / Load Balancing | ✅ | ✅ | ✅ |
-| بررسی سلامت / Health Check | ✅ | ✅ | ✅ |
-| تست پینگ / Ping test | ✅ | ✅ | ✅ |
-| بهترین کانفیگ / Best config | ✅ | ✅ | ✅ |
+| توزیع بار | ✅ | ✅ | ✅ |
+| بررسی سلامت | ✅ | ✅ | ✅ |
+| تست پینگ | ✅ | ✅ | ✅ |
+| بهترین کانفیگ | ✅ | ✅ | ✅ |
 | QR Code | ✅ | ✅ | ✅ |
-| نمایش لیست کانفیگ / Display config list | ✅ | ✅ | ✅ |
-| پروکسی DoH / DoH proxy | ✅ | ✅ | ✅ |
-| رمزگذاری DNS / DNS encryption | ✅ | ✅ | ✅ |
+| نمایش لیست کانفیگ | ✅ | ✅ | ✅ |
+| پروکسی DoH | ✅ | ✅ | ✅ |
+| رمزگذاری DNS | ✅ | ✅ | ✅ |
 | Load Balance / Failover / Caching DNS | ✅ | ✅ | ✅ |
-| DNS محلی / Local DNS | ✅ | ✅ | ✅ |
-| دور زدن تحریم DNS / Anti Sanction DNS | ✅ | ✅ | ✅ |
+| DNS محلی | ✅ | ✅ | ✅ |
+| دور زدن تحریم DNS | ✅ | ✅ | ✅ |
 | IP جعلی / Fake DNS | ✅ | ✅ | ✅ |
-| مسیریابی / GeoIP / GeoSite / Routing | ✅ | ✅ | ✅ |
-| اتصال مستقیم به سایت ایرانی / Domestic Bypass | ✅ | ✅ | ✅ |
-| پشتیبانی IPv6 / IPv6 support | ✅ | ✅ | ✅ |
-| مسدودسازی تبلیغات و بزرگسال / AdBlock + PornBlock | ✅ | ✅ | ✅ |
-| پورت‌های کلادفلیر / Cloudflare ports | ✅ | ✅ | ✅ |
-| لینک مستقیم Trojan / Trojan direct link | ✅ | ✅ | ✅ |
-| لینک مستقیم Clash / Clash direct link | ✅ | ✅ | ✅ |
-| حالت سراسری SOCKS5 / Global SOCKS5 mode | ✅ | ✅ | ✅ |
-| حالت سراسری HTTP / Global HTTP mode | ✅ | ✅ | ✅ |
-| اسکن IP تمیز / Clean Cloudflare IP scanner | ✅ | ✅ | ✅ |
-| نوتیفیکیشن تلگرام / Telegram notifications | ✅ | ✅ | ✅ |
-| مدیریت ربات تلگرام / Telegram bot management | ✅ | ✅ | ✅ |
+| مسیریابی / GeoIP / GeoSite | ✅ | ✅ | ✅ |
+| اتصال مستقیم به سایت ایرانی | ✅ | ✅ | ✅ |
+| پشتیبانی IPv6 | ✅ | ✅ | ✅ |
+| مسدودسازی تبلیغات و بزرگسال | ✅ | ✅ | ✅ |
+| پورت‌های کلادفلیر | ✅ | ✅ | ✅ |
+| لینک مستقیم Trojan | ✅ | ✅ | ✅ |
+| لینک مستقیم Clash | ✅ | ✅ | ✅ |
+| حالت سراسری SOCKS5 | ✅ | ✅ | ✅ |
+| حالت سراسری HTTP | ✅ | ✅ | ✅ |
+| اسکن IP تمیز | ✅ | ✅ | ✅ |
+| نوتیفیکیشن تلگرام | ✅ | ✅ | ✅ |
+| مدیریت ربات تلگرام | ✅ | ✅ | ✅ |
 | Quantumult X | ➖ | ✅ | ✅ |
-| تشخیص خودکار کلاینت / Mixed Auto | ➖ | ✅ | ✅ |
+| تشخیص خودکار کلاینت | ➖ | ✅ | ✅ |
 | Random Path / Wildcard Host | ➖ | ✅ | ✅ |
-| پنل مدیریت فارسی (RTL) / Admin dashboard | ➖ | ✅ | ✅ |
-| حالت ساده و پیشرفته / Simple + Advanced mode | ➖ | ✅ | ✅ |
-| تم تاریک / Dark mode | ➖ | ✅ | ✅ |
-| ویرایشگر JSON / JSON Config Editor | ➖ | ✅ | ✅ |
-| مشاهده لاگ / Log Viewer | ➖ | ✅ | ✅ |
-| بازنشانی تنظیمات / Reset config | ➖ | ✅ | ✅ |
+| پنل مدیریت فارسی (RTL) | ➖ | ✅ | ✅ |
+| حالت ساده و پیشرفته | ➖ | ✅ | ✅ |
+| تم تاریک | ➖ | ✅ | ✅ |
+| ویرایشگر JSON | ➖ | ✅ | ✅ |
+| مشاهده لاگ | ➖ | ✅ | ✅ |
+| بازنشانی تنظیمات | ➖ | ✅ | ✅ |
 | VLESS + Trojan + Shadowsocks | ➖ | ✅ | ✅ |
 | gRPC + XHTTP transport | ➖ | ✅ | ✅ |
 | WebSocket Early Data | ➖ | ✅ | ✅ |
 | mux=0 برای Shadowsocks | ➖ | ✅ | ✅ |
-| زنجیره SOCKS5 / SOCKS5 chain | ➖ | ✅ | ✅ |
+| زنجیره SOCKS5 | ➖ | ✅ | ✅ |
 | زنجیره HTTP/HTTPS CONNECT | ➖ | ✅ | ✅ |
 | زنجیره TURN + SSTP | ➖ | ✅ | ✅ |
 | حالت سراسری HTTPS / TURN / SSTP | ➖ | ✅ | ✅ |
-| لیست سفید دامنه / Whitelist domains | ➖ | ✅ | ✅ |
-| زنجیره در لینک اشتراک / Chain in sub link | ➖ | ✅ | ✅ |
+| لیست سفید دامنه | ➖ | ✅ | ✅ |
+| زنجیره در لینک اشتراک | ➖ | ✅ | ✅ |
 | TLS 1.3 / 1.2 | ➖ | ✅ | ✅ |
 | ChaCha20-Poly1305 / AES-GCM | ➖ | ✅ | ✅ |
 | ClientHello سفارشی / ALPN | ➖ | ✅ | ✅ |
 | SNI fragment / TLS fragment | ➖ | ✅ | ✅ |
-| بازگشت به ChaCha20 / Fallback to ChaCha20 | ➖ | ✅ | ✅ |
+| بازگشت به ChaCha20 | ➖ | ✅ | ✅ |
 | AES-128/256-GCM (Shadowsocks) | ➖ | ✅ | ✅ |
 | تشخیص خودکار / کلید جلسه پویا | ➖ | ✅ | ✅ |
 | بهینه‌سازی آنلاین / API / لیست IP دلخواه | ➖ | ✅ | ✅ |
 | تولید IP تصادفی / دسته‌بندی نتایج | ➖ | ✅ | ✅ |
-| ذخیره و جایگزینی نتایج / Save/Override | ➖ | ✅ | ✅ |
-| بهینه‌سازی IP به‌تفکیک ISP / Per-ISP clean-IP | ➖ | ✅ | ✅ |
+| ذخیره و جایگزینی نتایج | ➖ | ✅ | ✅ |
+| بهینه‌سازی IP به‌تفکیک ISP | ➖ | ✅ | ✅ |
 | Webhook تلگرام / تنظیمات ربات در پنل | ➖ | ✅ | ✅ |
 | مشاهده مصرف Cloudflare / API Token | ➖ | ✅ | ✅ |
-| API مصرف سفارشی / Custom Usage API | ➖ | ✅ | ✅ |
+| API مصرف سفارشی | ➖ | ✅ | ✅ |
 | لینک مستقیم VLESS + Shadowsocks | ➖ | ✅ | ✅ |
-| اشتراک با توکن / Subscription with token | ➖ | ✅ | ✅ |
-| کپی یک‌کلیک / Full clipboard copy | ➖ | ✅ | ✅ |
+| اشتراک با توکن | ➖ | ✅ | ✅ |
+| کپی یک‌کلیک | ➖ | ✅ | ✅ |
 | فضای KV (Config, CF, TG, IPs, Logs) | ➖ | ✅ | ✅ |
 | ورود با رمز / Auth Cookie | ➖ | ✅ | ✅ |
 | اعتبارسنجی UUID / Token Auth (MD5) | ➖ | ✅ | ✅ |
-| مسدودسازی speed test / Speed test block | ➖ | ✅ | ✅ |
-| متغیرهای محیطی / Environment variables | ➖ | ✅ | ✅ |
+| مسدودسازی speed test | ➖ | ✅ | ✅ |
+| متغیرهای محیطی | ➖ | ✅ | ✅ |
 | پنل واکنش‌گرا فارسی / Persian RTL responsive | ➖ | ✅ | ✅ |
 | نقشه Leaflet / Toast / Modal | ➖ | ✅ | ✅ |
 | ماژول‌های جمع‌شونده / SVG icons | ➖ | ✅ | ✅ |
-| کپی به کلیپ‌بورد / Copy to clipboard | ➖ | ✅ | ✅ |
-| TCP همزمان / 0-RTT / Concurrent TCP dial | ➖ | ✅ | ✅ |
-| تجمیع آپلود / داونلود / Uplink/downlink | ➖ | ✅ | ✅ |
-| محدودیت صف آپلود / Upload queue limit | ➖ | ✅ | ✅ |
+| کپی به کلیپ‌بورد | ➖ | ✅ | ✅ |
+| TCP همزمان / 0-RTT | ➖ | ✅ | ✅ |
+| تجمیع آپلود / داونلود | ➖ | ✅ | ✅ |
+| محدودیت صف آپلود | ➖ | ✅ | ✅ |
 | Load Balance IP / Proxy Fallback | ➖ | ✅ | ✅ |
 | لینک اشتراک بدون توکن با فرمت نام‌گذاری شده | ➖ | ➖ | ✅ |
 | آینه دائمی گیتهاب برای اشتراک | ➖ | ➖ | ✅ |
@@ -216,17 +216,19 @@ bash <(curl -fsSL https://raw.githubusercontent.com/IRNova/Tools/main/nova-backe
 
 ## 💜 حمایت از پروژه
 
-اگر نوا برایتان مفید بود، لطفاً با یک **⭐ ستاره** و یک دونیت کوچک از ادامه‌ی کار حمایت کنید.
+اگر فری برایتان مفید بود، لطفاً با یک **⭐ ستاره** و یک دونیت کوچک از ادامه‌ی کار حمایت کنید.
 
 <div align="center">
 
-### ⭐ [به نوا در گیتهاب ستاره بدهید](https://github.com/IRNova/Nova-Proxy) ⭐
+### ⭐ [به فری در گیتهاب ستاره بدهید](https://github.com/Xknohub/Frei) ⭐
 
-[![Star on GitHub](https://img.shields.io/github/stars/IRNova/Nova-Proxy?style=for-the-badge&logo=github&label=Star%20Nova&color=8957e5)](https://github.com/IRNova/Nova-Proxy)
+[![Star on GitHub](https://img.shields.io/github/stars/Xknohub/Frei?style=for-the-badge&logo=github&label=Star%20Frei&color=8957e5)](https://github.com/Xknohub/Frei)
 
 | ارز دیجیتال | آدرس |
 |-------------|------|
 | **TON** | `UQD51lGC35rP_SbVYgbFA7CEEii4GVMFgqj4N8fiGi6m425w` |
+
+</div>
 
 ---
 
@@ -234,7 +236,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/IRNova/Tools/main/nova-backe
 
 ساخته شده با ❤️ برای اینترنت آزاد و باز.
 
-- [@iiviirv](https://github.com/iiviirv) — مشارکت‌کننده
+- [@Xknohub](https://github.com/Xknohub) — سازنده
 - [Cloudflare Workers](https://workers.cloudflare.com/)
 - [Xray-core](https://github.com/XTLS/xray-core)
 
@@ -242,44 +244,46 @@ bash <(curl -fsSL https://raw.githubusercontent.com/IRNova/Tools/main/nova-backe
 
 ## 📜 شرایط: رایگان است و برای فروش نیست
 
-**کد** نوا متن‌باز و تحت مجوز MIT است: آزادی که خودت میزبانی کنی، مطالعه و تغییرش بدی. نوا یک **سرویس رایگان** است، پس شرایط زیر برای نام نوا و کانفیگ‌هایی که می‌سازد اعمال می‌شود:
+**کد** فری متن‌باز و تحت مجوز MIT است: آزادی که خودت میزبانی کنی، مطالعه و تغییرش بدهی. فری یک **سرویس رایگان** است، پس شرایط زیر برای نام فری و کانفیگ‌هایی که می‌سازد اعمال می‌شود:
 
-- **نفروش.** کانفیگ‌ها، اشتراک‌ها یا دسترسی نوا را به‌عنوان محصول پولی نفروش. نوا برای همه رایگان است.
-- **نشان سرویس رایگان را حذف نکن.** هر نودِ ساخته‌شده یک نشان قفل‌شدهٔ `سرویس رایگان نوا @irnova_proxy` دارد. حذف آن برای جا زدن کانفیگ‌ها به‌عنوان سرویس پولی خودت مجاز نیست.
-- **اعتبار را نگه دار.** اگر فورک یا بازتوزیع می‌کنی، اعتبار نوا پروکسی و لینک به این ریپازیتوری را نگه دار.
-- **جعل هویت نکن.** از نام، لوگو یا کانال نوا برای جا زدن یک نسخهٔ ری‌برندشده به‌عنوان نوای رسمی استفاده نکن.
+- **نفروش.** کانفیگ‌ها، اشتراک‌ها یا دسترسی فری را به‌عنوان محصول پولی نفروش. فری برای همه رایگان است.
+- **نشان سرویس رایگان را حذف نکن.** هر نودِ ساخته‌شده یک نشان قفل‌شدهٔ `سرویس رایگان فری @freir_proxy` دارد. حذف آن برای جا زدن کانفیگ‌ها به‌عنوان سرویس پولی خودت مجاز نیست.
+- **اعتبار را نگه دار.** اگر فورک یا بازتوزیع می‌کنی، اعتبار فری پروکسی و لینک به این ریپازیتوری را نگه دار.
+- **جعل هویت نکن.** از نام، لوگو یا کانال فری برای جا زدن یک نسخهٔ ری‌برندشده به‌عنوان فری رسمی استفاده نکن.
 
-مجوز MIT شامل کد می‌شود. نام، برند نوا و وعدهٔ «رایگان ماندن» متعلق به پروژه است.
+مجوز MIT شامل کد می‌شود. نام، برند فری و وعدهٔ «رایگان ماندن» متعلق به پروژه است.
 
 ---
 
 ## مجوز
 
-MIT — فایل [LICENSE](LICENSE) را ببینید. مجوز MIT برای سورس‌کد است؛ شرایط برند بالا برای نام و سرویس نوا اعمال می‌شود.
+MIT — فایل [LICENSE](LICENSE) را ببینید. مجوز MIT برای سورس‌کد است؛ شرایط برند بالا برای نام و سرویس فری اعمال می‌شود.
 
 ---
 
 <div align="center">
 
-ساخته شده برای ایران <img src="https://raw.githubusercontent.com/IRNova/Nova-Proxy/main/flag-iran.svg" height="16" alt="Iran (Lion and Sun)" /> — و هرکس که به اینترنت آزاد نیاز دارد.
+ساخته شده برای ایران <img src="https://raw.githubusercontent.com/Xknohub/Frei/main/flag-iran.svg" height="16" alt="Iran (Lion and Sun)" /> — و هرکس که به اینترنت آزاد نیاز دارد.
 **هیچ اطلاعاتی از ترافیک شما ذخیره نمی‌شود. پروکسی متعلق به خود شماست.**
 
 📖 [نسخه انگلیسی / English version](README.md)
 
 ---
-<a href="https://www.star-history.com/?repos=IRNova%2FNova-Proxy&type=date&legend=top-left">
+
+<a href="https://www.star-history.com/?repos=Xknohub%2FFrei&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=IRNova/Nova-Proxy&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=IRNova/Nova-Proxy&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=IRNova/Nova-Proxy&type=date&legend=top-left" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Xknohub/Frei&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Xknohub/Frei&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Xknohub/Frei&type=date&legend=top-left" />
  </picture>
 </a>
+
 </div>
 
 ---
 
 <div align="center">
 
-ساخته شده توسط <a href="https://github.com/iiviirv"><b>@iiviirv</b></a> برای گروه نوا پروکسی.
+ساخته شده توسط <a href="https://github.com/Xknohub"><b>@Xknohub</b></a> برای گروه فری پروکسی.
 
 </div>

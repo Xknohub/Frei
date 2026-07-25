@@ -28,20 +28,20 @@ function hostMatchesProxyList(host) {
 	const lists = connProxyWhitelist.length ? reshimaLevanaSocks5.concat(connProxyWhitelist) : reshimaLevanaSocks5;
 	return lists.some(p => { try { return new RegExp(`^${String(p).trim().replace(/\*/g, '.*')}$`, 'i').test(host); } catch (e) { return false; } });
 }
-const PagesDafStati = 'https://nova-panel.github.io/';
+const PagesDafStati = 'https://frei-panel.github.io/';
 function panelOrigin(env){ const e = env || _globalEnv; const u = e && (e.PAGES_URL || e.PAGE_URL); if (u && typeof u === 'string' && u.trim()){ let x = u.trim(); if(!/^https?:\/\//i.test(x)) x='https://'+x; return x.replace(/\/+$/,'')+'/'; } return PagesDafStati; }
-const NOVA_FREE_NOTICE = '🎁 نوا رایگان است، برای آن به کسی پول ندهید';
+const frei_NOVA_FREE_NOTICE[6:] = '🎁 نوا رایگان است، برای آن به کسی پول ندهید';
 // Official Nova Telegram channel. LOCKED: this exact URL is injected into every
 // subscription and is NOT overridable from the panel, env, or KV, so a reseller can
 // never point the "channel" line anywhere but Nova's own channel.
-const NOVA_TG_CHANNEL = 'https://t.me/irnova_proxy';
+const frei_NOVA_TG_CHANNEL[6:] = 'https://t.me/frei_proxy';
 // Public @handle derived from the channel, woven into every node name so a buyer of a
 // resold config can find the free source. Locked like the channel line above.
-const NOVA_TG_HANDLE = '@' + (String(NOVA_TG_CHANNEL).split('/').filter(Boolean).pop() || 'irnova_proxy');
+const frei_NOVA_TG_HANDLE[6:] = '@' + (String(frei_NOVA_TG_CHANNEL[6:]).split('/').filter(Boolean).pop() || 'frei_proxy');
 // Build stamp: bump this whenever worker.js changes so a deploy can be verified at a
 // glance (GET /install/status returns it). If the panel/status still shows an old build
 // after a deploy, the upload didn't take.
-const NOVA_BUILD = '2026-07-14.20';
+const frei_NOVA_BUILD[6:] = '2026-07-14.20';
 globalThis.__workerStart = Date.now();
 // --- Config JSON cache: avoids repeated KV reads on every request ---
 const _CFG_KEY = 'config.json';
@@ -65,7 +65,7 @@ const bytesGrainYerida = 64 * 1024, safZanavGrainMorad = 512, milishniyotShkitat
 const haavaraMehira = false, haavaraMaks = false;
 let misparChiyugTcpMakbili = 4, preloadChiyugMerotz = false;
 const regexKtovetTzomet = /^(\[[\da-fA-F:]+\]|[\d.]+|[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?)*)(?::(\d+))?(?:#(.+))?$/;
-const novaMachsanRaw = 'https://raw.githubusercontent.com/IRNova/Nova-Proxy/main';
+const novaMachsanRaw = 'https://raw.githubusercontent.com/IRNova/Frei/main';
 const urlGirsatNOVA = novaMachsanRaw + '/version.json';
 const NOVAWorkerSrcFallback = novaMachsanRaw + '/worker.js';
 const tikraTzometLecholMishtamesh = 40;
@@ -643,8 +643,8 @@ function relayJson(obj, status = 200) {
 	return new Response(JSON.stringify(obj), { status, headers: { 'content-type': 'application/json' } });
 }
 function getRelayHTML(actualHost) {
-	const logoUrl = 'https://raw.githubusercontent.com/IRNova/Nova-Proxy-App/main/logo.svg';
-	return `<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Nova Proxy Relay</title><link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet"><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Vazirmatn',sans-serif;background:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px}.logo{width:120px;height:120px;border-radius:50%;object-fit:cover;animation:pulse 2s ease-in-out infinite;box-shadow:0 0 0 0 rgba(231,76,60,.4)}@keyframes pulse{0%{transform:scale(1);box-shadow:0 0 0 0 rgba(231,76,60,.4)}50%{transform:scale(1.05);box-shadow:0 0 0 15px rgba(231,76,60,0)}100%{transform:scale(1);box-shadow:0 0 0 0 rgba(231,76,60,0)}}h1{font-size:36px;font-weight:900;color:#2c3e50;margin-top:20px}.status{font-size:20px;color:#27ae60;font-weight:700;margin-top:10px;display:flex;align-items:center;justify-content:center;gap:8px}.status-dot{width:10px;height:10px;background:#27ae60;border-radius:50%;display:inline-block;animation:blink 1.4s ease-in-out infinite}@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}.subtitle{font-size:14px;color:#95a5a6;margin-top:6px}</style></head><body><img class="logo" src="${logoUrl}" alt="Nova Proxy Relay"><h1>نوا پروکسی</h1><div class="status"><span class="status-dot"></span>رله نوا فعال است</div><div class="subtitle">Nova Proxy Relay</div></body></html>`;
+	const logoUrl = 'https://raw.githubusercontent.com/IRNova/Frei-App/main/logo.svg';
+	return `<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Frei Relay</title><link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet"><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Vazirmatn',sans-serif;background:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px}.logo{width:120px;height:120px;border-radius:50%;object-fit:cover;animation:pulse 2s ease-in-out infinite;box-shadow:0 0 0 0 rgba(231,76,60,.4)}@keyframes pulse{0%{transform:scale(1);box-shadow:0 0 0 0 rgba(231,76,60,.4)}50%{transform:scale(1.05);box-shadow:0 0 0 15px rgba(231,76,60,0)}100%{transform:scale(1);box-shadow:0 0 0 0 rgba(231,76,60,0)}}h1{font-size:36px;font-weight:900;color:#2c3e50;margin-top:20px}.status{font-size:20px;color:#27ae60;font-weight:700;margin-top:10px;display:flex;align-items:center;justify-content:center;gap:8px}.status-dot{width:10px;height:10px;background:#27ae60;border-radius:50%;display:inline-block;animation:blink 1.4s ease-in-out infinite}@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}.subtitle{font-size:14px;color:#95a5a6;margin-top:6px}</style></head><body><img class="logo" src="${logoUrl}" alt="Frei Relay"><h1>نوا پروکسی</h1><div class="status"><span class="status-dot"></span>رله نوا فعال است</div><div class="subtitle">Frei Relay</div></body></html>`;
 }
 ///////////////////////////////////////////////////////Linked Panels & Auto-Update///////////////////////////////////////////////
 async function syncToLinkedPanels(env, config, ctx) {
@@ -745,17 +745,17 @@ function cmpVersions(a, b) {
 }
 async function runAutoUpdate(env, ns, ctx) {
 	try {
-		const repo = (ns.githubRepo || 'IRNova/Nova-Proxy').replace(/https?:\/\/github\.com\//, '').trim();
+		const repo = (ns.githubRepo || 'IRNova/Frei').replace(/https?:\/\/github\.com\//, '').trim();
 		const cfAccountId = ns.cfAccountId, cfApiToken = ns.cfApiToken, cfWorkerName = ns.cfWorkerName;
 		if (!cfAccountId || !cfApiToken || !cfWorkerName) return;
 		let remoteVer = null, workerCode = null;
 		try {
-const res = await fetch(`https://raw.githubusercontent.com/${repo}/main/version.json`, { headers: { 'User-Agent': 'NovaProxy' }, cf: { cacheTtl: 0 } });
+const res = await fetch(`https://raw.githubusercontent.com/${repo}/main/version.json`, { headers: { 'User-Agent': 'Frei' }, cf: { cacheTtl: 0 } });
 			if (res.ok) { const j = await res.json(); remoteVer = j && j.version ? String(j.version).replace(/^[vV]/, '') : null; }
 		} catch (e) {}
 		if (!remoteVer) {
 			try {
-				const res = await fetch(`https://raw.githubusercontent.com/${repo}/main/worker.js`, { headers: { 'User-Agent': 'NovaProxy' } });
+				const res = await fetch(`https://raw.githubusercontent.com/${repo}/main/worker.js`, { headers: { 'User-Agent': 'Frei' } });
 				if (res.ok) { workerCode = await res.text(); const m = workerCode.match(/const\s+Version\s*=\s*['"]([^'"]+)['"]/); if (m) remoteVer = m[1].replace(/^[vV]/, ''); }
 			} catch (e) {}
 		}
@@ -763,7 +763,7 @@ const res = await fetch(`https://raw.githubusercontent.com/${repo}/main/version.
 		if (!remoteVer || cmpVersions(currentVer, remoteVer) >= 0) { log('[AutoUpdate] no update available'); return; }
 		if (!workerCode) {
 			const codeUrl = `https://raw.githubusercontent.com/${repo}/main/worker.js`;
-			const r = await fetch(codeUrl, { headers: { 'User-Agent': 'NovaProxy' } });
+			const r = await fetch(codeUrl, { headers: { 'User-Agent': 'Frei' } });
 			if (!r.ok) { log('[AutoUpdate] failed to fetch worker code: HTTP ' + r.status); return; }
 			workerCode = await r.text();
 		}
@@ -843,7 +843,7 @@ async function totpVerify(secretB32, token, window = 1) {
 	for (let w = -window; w <= window; w++) { if (await totpAt(secretB32, t + w) === token) return true; }
 	return false;
 }
-function novaDisguise(env) {
+function freiDisguise(env) {
 	try {
 		if (env && (env.PANEL_RECOVERY === '1' || env.PANEL_RECOVERY === 'true')) return { on: false, adminPath: '', loginPath: '', subPath: '', pubAdmin: '/admin', pubLogin: '/login' };
 		const ns = hagdarotReshet || {};
@@ -865,7 +865,7 @@ function versionGreater(a, b) {
 }
 async function kabelGirsatNova() {
 	for (const u of [urlGirsatNOVA, novaMachsanRaw + '/version.json']) {
-		try { const r = await fetch(u, { headers: { 'User-Agent': 'NovaProxy' }, cf: { cacheTtl: 0 } }); if (r.ok) { const j = await r.json(); if (j && j.version) return j; } } catch (e) {}
+		try { const r = await fetch(u, { headers: { 'User-Agent': 'Frei' }, cf: { cacheTtl: 0 } }); if (r.ok) { const j = await r.json(); if (j && j.version) return j; } } catch (e) {}
 	}
 	return null;
 }
@@ -923,7 +923,7 @@ async function panelHtml(env, path, opts = {}) {
 		text = text.replace(/"\.\.\/logo\.png"/g, `"${panelOrigin(env)}logo.png"`);
 		text = text.replace(/src=['"]\.\.\/logo\.png['"]/g, `src="${panelOrigin(env)}logo.png"`);
 	}
-	const _dgp = novaDisguise(env);
+	const _dgp = freiDisguise(env);
 	if (_dgp.on && _dgp.pubAdmin !== '/admin') {
 		text = text.replace(/location\.href=(['"])\/admin\1/g, `location.href='${_dgp.pubAdmin}'`);
 		text = text.replace(/"start_url":"\/admin"/g, `"start_url":"${_dgp.pubAdmin}"`);
@@ -956,7 +956,7 @@ async function panelHtml(env, path, opts = {}) {
 	return new Response(text, { status: opts.status || r.status, headers: h });
 }
 function panelUnavailableHtml() {
-	return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nova Proxy — setup</title>'
+	return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frei — setup</title>'
 		+ '<style>body{font-family:system-ui,Segoe UI,Tahoma,sans-serif;background:#0b0d11;color:#e9edf4;margin:0;display:flex;min-height:100vh;align-items:center;justify-content:center;padding:24px}'
 		+ '.c{max-width:560px;background:#101319;border:1px solid #1c2027;border-radius:16px;padding:28px}h1{font-size:18px;margin:0 0 12px}p{color:#aeb6c4;line-height:1.7;font-size:14px}code{background:#0b0d11;border:1px solid #1c2027;border-radius:5px;padding:1px 6px;color:#22d3ee}</style></head>'
 		+ '<body><div class="c"><h1>Dashboard not bundled yet</h1>'
@@ -1013,7 +1013,7 @@ function wrapKVWithD1(env) {
 			// the write. This is CRITICAL: without it a D1 failure silently drops the write, so a newly
 			// created user lives only in the in-memory global and vanishes when the isolate recycles.
 			// Awaited (not fire-and-forget) so the write is durable before the response returns.
-			if (realKV && (!ok || env.NOVA_KV_MIRROR === '1' || env.NOVA_KV_MIRROR === 'true')) {
+			if (realKV && (!ok || env.frei_NOVA_KV_MIRROR[6:] === '1' || env.frei_NOVA_KV_MIRROR[6:] === 'true')) {
 				try { await realKV.put(k, v, opts); ok = true; } catch (e) { console.error('kv.put KV fallback failed for ' + k + ': ' + (e && e.message || e)); }
 			}
 			if (!ok) throw new Error('KV put failed: neither D1 nor KV accepted the write for ' + k);
@@ -1387,7 +1387,7 @@ async function sherutMerkazMishtamesh(objMishtameshMinuy, env) {
 	try {
 		const base = String(panelOrigin(env) || '').replace(/\/+$/, '');
 		if (!base || /your-panel\.pages\.dev/i.test(base)) return null;
-		const r = await fetch(base + '/user/index.html', { headers: { 'User-Agent': 'NovaProxy' }, cf: { cacheTtl: 300, cacheEverything: true } });
+		const r = await fetch(base + '/user/index.html', { headers: { 'User-Agent': 'Frei' }, cf: { cacheTtl: 300, cacheEverything: true } });
 		if (!r || !r.ok) return null;
 		let html = await r.text();
 		if (!html || html.length < 50) return null;
@@ -1417,7 +1417,7 @@ async function sherutMerkazMishtamesh(objMishtameshMinuy, env) {
 				status: status
 			};
 			const usageData = { up: upBytes, down: downBytes, total: totalBytes, dailyUp: dailyUp, dailyDown: dailyDown, dailyTotal: dailyTotal };
-			const injectScript = '<script>window.__NOVA_USER__=' + JSON.stringify(userData) + ';window.__NOVA_USAGE__=' + JSON.stringify(usageData) + ';</script>';
+			const injectScript = '<script>window.__frei_NOVA_USER__[6:]=' + JSON.stringify(userData) + ';window.__frei_NOVA_USAGE__[6:]=' + JSON.stringify(usageData) + ';</script>';
 			html = html.replace('</head>', injectScript + '</head>');
 		}
 		return new Response(html, { status: 200, headers: { 'content-type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' } });
@@ -1439,7 +1439,7 @@ async function hasagatKidometNat64() {
 	if (/^https?:\/\//i.test(src)) {
 		if (mitmonKidometNat64 && makorMitmonNat64 === src && (Date.now() - zmanMitmonNat64) < 3600000) return mitmonKidometNat64;
 		try {
-			const r = await fetch(src, { headers: { 'User-Agent': 'NovaProxy' } }); const txt = await r.text();
+			const r = await fetch(src, { headers: { 'User-Agent': 'Frei' } }); const txt = await r.text();
 			let list = (txt.match(/\[([0-9a-fA-F:]+::)\]/g) || []).map(s => s.replace(/[\[\]]/g, ''));
 			if (!list.length) list = txt.split(/[\n,]+/).map(s => s.replace(/[\[\]]/g, '').trim()).filter(s => s.includes('::'));
 			mitmonKidometNat64 = [...new Set(list)]; zmanMitmonNat64 = Date.now(); makorMitmonNat64 = src; return mitmonKidometNat64;
@@ -1596,8 +1596,8 @@ export default {
 					monthlyCapGB: 0, speedLimitKBps: 0, blockQUIC: false,
 					warpNoise: { mode: '', count: '', size: '', delay: '' },
 					linkedPanels: [], hubPanelUrl: '', syncApiKey: '',
-					autoUpdate: false, autoUpdateFormat: 'normal', autoUpdateInterval: 3600000, githubRepo: 'IRNova/Nova-Proxy',
-					telegramChannel: 'https://t.me/irnova_proxy',
+					autoUpdate: false, autoUpdateFormat: 'normal', autoUpdateInterval: 3600000, githubRepo: 'IRNova/Frei',
+					telegramChannel: 'https://t.me/frei_proxy',
 					fakeConfigs: [
 						{ name: '📢 {telegram}', enabled: true, locked: true },
 						{ name: '📊 {usage}  |  📅 {expiry}', enabled: true }
@@ -1634,7 +1634,7 @@ export default {
 			mitmonReshimaLevanaSocks5 = reshimaLevanaSocks5;
 		} else reshimaLevanaSocks5 = mitmonReshimaLevanaSocks5;
 		// --- Disguise: remap custom admin/login/sub paths (never block default /admin and /login) ---
-		const _dg = novaDisguise(env);
+		const _dg = freiDisguise(env);
 		if (_dg.on && upgradeHeader !== 'websocket') {
 			const _seg = nativGisha;
 			if (_dg.adminPath && (_seg === _dg.adminPath || _seg.startsWith(_dg.adminPath + '/'))) {
@@ -1748,9 +1748,9 @@ export default {
 				return await handleRelayRequest(request, env);
 			}
 			if (nativGisha === 'scan' || nativGisha === 'radar') {
-				return novaScanPage();
+				return freiScanPage();
 			}
-			if (nativGisha === 'nova-block') {
+			if (nativGisha === 'frei-block') {
 				return dafChasum(request);
 			}
 			if (nativGisha === 'warp' || nativGisha.startsWith('warp/')) {
@@ -1854,7 +1854,7 @@ export default {
 				if (nativGisha === 'admin/api/sync' && request.method !== 'POST') {
 					const _cors = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'authorization, content-type', 'Access-Control-Max-Age': '86400' };
 					if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: _cors });
-					if (request.method === 'GET') return new Response(JSON.stringify({ ok: true, build: NOVA_BUILD, version: Version }), { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8', ..._cors } });
+					if (request.method === 'GET') return new Response(JSON.stringify({ ok: true, build: frei_NOVA_BUILD[6:], version: Version }), { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8', ..._cors } });
 				}
 				// --- Central sync: on panel access, heartbeat + fetch notifications (once every 10 minutes) ---
 				ctx.waitUntil(flushUsage(env));
@@ -1885,8 +1885,8 @@ export default {
 						return new Response(JSON.stringify({ password: adminPassword || '', source: src }), { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8', 'Cache-Control': 'no-store' } });
 					} else if (nativGisha === 'admin/security/2fa-setup') {
 						const secret = randomBase32(32);
-						const label = encodeURIComponent('Nova Proxy (' + url.host + ')');
-						const otpauth = `otpauth://totp/${label}?secret=${secret}&issuer=${encodeURIComponent('Nova Proxy')}&algorithm=SHA1&digits=6&period=30`;
+						const label = encodeURIComponent('Frei (' + url.host + ')');
+						const otpauth = `otpauth://totp/${label}?secret=${secret}&issuer=${encodeURIComponent('Frei')}&algorithm=SHA1&digits=6&period=30`;
 						return new Response(JSON.stringify({ secret, otpauth }), { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8', 'Cache-Control': 'no-store' } });
 					} else if (nativGisha === 'admin/security/2fa-enable') {
 						if (request.method !== 'POST') return new Response('Method Not Allowed', { status: 405 });
@@ -2184,7 +2184,7 @@ export default {
 									})).filter(p => p.url && p.apiKey) : [],
 								hubPanelUrl: String(settings.hubPanelUrl || '').trim().slice(0, 200),
 								syncApiKey: String(settings.syncApiKey || '').trim().slice(0, 100),
-								telegramChannel: String(settings.telegramChannel || '').trim().slice(0, 200) || 'https://t.me/irnova_proxy',
+								telegramChannel: String(settings.telegramChannel || '').trim().slice(0, 200) || 'https://t.me/frei_proxy',
 								fakeConfigs: Array.isArray(settings.fakeConfigs) ? settings.fakeConfigs.map(f => ({
 									name: String(f.name || '').slice(0, 100),
 									enabled: typeof f.enabled === 'boolean' ? f.enabled : true,
@@ -2200,7 +2200,7 @@ export default {
 								autoUpdate: typeof settings.autoUpdate === 'boolean' ? settings.autoUpdate : false,
 									autoUpdateFormat: ['normal', 'obfuscated'].includes(settings.autoUpdateFormat) ? settings.autoUpdateFormat : 'normal',
 									autoUpdateInterval: (typeof settings.autoUpdateInterval === 'number' && settings.autoUpdateInterval >= 600000) ? settings.autoUpdateInterval : 3600000,
-									githubRepo: String(settings.githubRepo || '').trim().slice(0, 100) || 'IRNova/Nova-Proxy'
+									githubRepo: String(settings.githubRepo || '').trim().slice(0, 100) || 'IRNova/Frei'
 								};
 							// CRITICAL: users, multiUser, HOSTS, mirror and other state ALSO live inside
 							// network-settings.json. hagdarotTkefot only carries the routing/network fields,
@@ -2238,7 +2238,7 @@ export default {
 									// کشیدن کلیدهای WARP+ از استخر مرکزی و اعمال اولین کلید موفق
 									if (!stored || !stored.registered) stored = await registerWarpAccount(env, 'warp-account.json');
 									const { api } = await kabelCentralApi(env); if (!api) throw new Error('Central API not set in Settings');
-									let keys = []; try { const cr = await fetch(api + '/api/warp', { headers: { 'User-Agent': 'NovaProxy' } }); const cj = await cr.json(); keys = Array.isArray(cj.keys) ? cj.keys : []; } catch (e) {}
+									let keys = []; try { const cr = await fetch(api + '/api/warp', { headers: { 'User-Agent': 'Frei' } }); const cj = await cr.json(); keys = Array.isArray(cj.keys) ? cj.keys : []; } catch (e) {}
 									if (!keys.length) throw new Error('No WARP+ keys in the central pool');
 									let applied = false, lastErr = '';
 									for (const k of keys) { try { await applyWarpLicense(env, String(k).trim()); applied = true; break; } catch (e) { lastErr = e && e.message ? e.message : String(e); } }
@@ -2442,7 +2442,7 @@ export default {
 						let ktovetKodMakor = NOVAWorkerSrcFallback, girsaAchrona = '';
 						{ const meidaGirsa = await kabelGirsatNova(); if (meidaGirsa) { if (meidaGirsa.worker_url) ktovetKodMakor = meidaGirsa.worker_url; girsaAchrona = String(meidaGirsa.version || '').replace(/^[vV]/, ''); } }
 						let textScript = '';
-						try { const r = await fetch(ktovetKodMakor, { headers: { 'User-Agent': 'NovaProxy' } }); if (!r.ok) throw new Error('HTTP ' + r.status); textScript = await r.text(); } catch (e) { return _idkunTguvatShgia('Failed to download Worker source', { detail: (e && e.message) || String(e) }); }
+						try { const r = await fetch(ktovetKodMakor, { headers: { 'User-Agent': 'Frei' } }); if (!r.ok) throw new Error('HTTP ' + r.status); textScript = await r.text(); } catch (e) { return _idkunTguvatShgia('Failed to download Worker source', { detail: (e && e.message) || String(e) }); }
 						if (textScript.length < 1000 || !/export\s+default|addEventListener\s*\(/.test(textScript)) return _idkunTguvatShgia('Invalid Worker source');
 						// Content-only replace: swap the code, keep bindings/secrets/vars/D1/KV intact.
 						try {
@@ -2512,7 +2512,7 @@ export default {
 						if (!/^https?:\/\//i.test(cleanUrl)) cleanUrl = 'https://' + cleanUrl;
 						try {
 							const parsed = new URL(cleanUrl);
-							const r = await fetch(`${parsed.protocol}//${parsed.host}/version`, { headers: { 'User-Agent': 'NovaProxy' }, signal: AbortSignal.timeout(12000) });
+							const r = await fetch(`${parsed.protocol}//${parsed.host}/version`, { headers: { 'User-Agent': 'Frei' }, signal: AbortSignal.timeout(12000) });
 							let version = '?'; try { const j = await r.json(); version = j.version || j.Version || '?'; } catch (e) {}
 							return new Response(JSON.stringify({ success: r.ok, version, status: r.status }), { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
 						} catch (e) { return new Response(JSON.stringify({ success: false, error: e.message }), { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8' } }); }
@@ -2606,9 +2606,9 @@ export default {
 							await env.KV.put('network-settings.json', JSON.stringify(ns, null, 2));
 							mitmonHagdarotReshet = null;
 							if (body.action === 'check') {
-								const repo = (ns.githubRepo || 'IRNova/Nova-Proxy').replace(/https?:\/\/github\.com\//, '').trim();
+								const repo = (ns.githubRepo || 'IRNova/Frei').replace(/https?:\/\/github\.com\//, '').trim();
 								let remoteVer = null;
-								try { const res = await fetch(`https://raw.githubusercontent.com/${repo}/main/version.json`, { headers: { 'User-Agent': 'NovaProxy' }, cf: { cacheTtl: 0 } }); if (res.ok) { const j = await res.json(); if (j && j.version) remoteVer = String(j.version).replace(/^[vV]/, ''); } } catch (e) {}
+								try { const res = await fetch(`https://raw.githubusercontent.com/${repo}/main/version.json`, { headers: { 'User-Agent': 'Frei' }, cf: { cacheTtl: 0 } }); if (res.ok) { const j = await res.json(); if (j && j.version) remoteVer = String(j.version).replace(/^[vV]/, ''); } } catch (e) {}
 								const current = String(Version).replace(/^[vV]/, '');
 								return new Response(JSON.stringify({ success: true, current, latest: remoteVer || '', updateAvailable: remoteVer ? cmpVersions(current, remoteVer) < 0 : false, cfConfigured: !!(ns.cfAccountId && ns.cfApiToken && ns.cfWorkerName) }), { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8', 'Cache-Control': 'no-store' } });
 							}
@@ -2711,8 +2711,8 @@ export default {
 						disguise: false, adminPath: '', loginPath: '', subPath: '',
 						backendMode: false, backendUrl: '',
 					linkedPanels: [], hubPanelUrl: '', syncApiKey: '',
-					autoUpdate: false, autoUpdateFormat: 'normal', autoUpdateInterval: 3600000, githubRepo: 'IRNova/Nova-Proxy',
-					telegramChannel: 'https://t.me/irnova_proxy',
+					autoUpdate: false, autoUpdateFormat: 'normal', autoUpdateInterval: 3600000, githubRepo: 'IRNova/Frei',
+					telegramChannel: 'https://t.me/frei_proxy',
 					fakeConfigs: [
 						{ name: '📢 {telegram}', enabled: true, locked: true },
 						{ name: '📊 {usage}  |  📅 {expiry}', enabled: true }
@@ -2949,7 +2949,7 @@ export default {
 						const _pxUrl = _pxSrc[_pxMode];
 						if (!_pxUrl) return new Response(JSON.stringify({ error: 'no_source' }), { status: 400, headers: { 'Content-Type': 'application/json;charset=utf-8', 'Cache-Control': 'no-store' } });
 						try {
-							const _pxRes = await fetch(_pxUrl, { headers: { 'User-Agent': 'NovaProxy' }, cf: { cacheTtl: 300, cacheEverything: true } });
+							const _pxRes = await fetch(_pxUrl, { headers: { 'User-Agent': 'Frei' }, cf: { cacheTtl: 300, cacheEverything: true } });
 							if (!_pxRes.ok) return new Response(JSON.stringify({ error: 'upstream', status: _pxRes.status }), { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8', 'Cache-Control': 'no-store' } });
 							const _pxBody = await _pxRes.text();
 							return new Response(_pxBody, { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8', 'Cache-Control': 'no-store' } });
@@ -3216,7 +3216,7 @@ export default {
 						};
 						try {
 							// نام پروفایل در کلاینت: اگر SUBNAME سفارشی باشد از آن استفاده می‌شود، در غیر این صورت نام پیش‌فرض فارسی
-							const _profileName = (config_JSON.muvcharMinuyMecholel.SUBNAME && config_JSON.muvcharMinuyMecholel.SUBNAME !== 'Nova Proxy')
+							const _profileName = (config_JSON.muvcharMinuyMecholel.SUBNAME && config_JSON.muvcharMinuyMecholel.SUBNAME !== 'Frei')
 								? config_JSON.muvcharMinuyMecholel.SUBNAME : '🎁 سرویس رایگان نوا';
 							try { responseHeaders["Profile-Title"] = 'base64:' + btoa(unescape(encodeURIComponent(_profileName))); } catch (e) {}
 							if (!ua.includes('mozilla')) responseHeaders["Content-Disposition"] = `attachment; filename*=utf-8''${encodeURIComponent(_profileName)}`;
@@ -3422,7 +3422,7 @@ export default {
 									log(`[Sub.NodeLimit] applied shuffle/dedup; uniqueIps=${_pool.length} afterLimit=${ipNivcharMale.length}`);
 								}
 							}
-							ipNivcharMale = [host + ':443#' + NOVA_FREE_NOTICE, ...ipNivcharMale];
+							ipNivcharMale = [host + ':443#' + frei_NOVA_FREE_NOTICE[6:], ...ipNivcharMale];
 							// enableDirectConfigs: اضافه کردن کانفیگ مستقیم (بدون پروکسی) به اشتراک
 							if (hagdarotReshet && hagdarotReshet.enableDirectConfigs) {
 								const _directPath = config_JSON.nativTzometMale || config_JSON.PATH || '/?ed=2560';
@@ -3523,7 +3523,7 @@ export default {
 										const _rawRemark = String(match[3] || '').replace(/ ·S\d+$/, '').replace(/\$(socks5|http|https|turn|sstp):\/\/[^#\s]+/i, '').trim();
 										const _flagMatch = _rawRemark.match(/^(?:\uD83C[\uDDE6-\uDDFF]){2}/);
 										const _flag = _flagMatch ? _flagMatch[0] + ' ' : '';
-										hearatTzomet = `${_flag}سرویس رایگان نوا ${NOVA_TG_HANDLE} ${ktovetTzomet}:${portTzomet} [${_np.toUpperCase()}]${_chainMark}`;
+										hearatTzomet = `${_flag}سرویس رایگان نوا ${frei_NOVA_TG_HANDLE[6:]} ${ktovetTzomet}:${portTzomet} [${_np.toUpperCase()}]${_chainMark}`;
 									}
 									if (_np === 'ss' && !keGenNivchar) {
 									if (!config_JSON.SS.TLS) {
@@ -3599,7 +3599,7 @@ export default {
 						// Nova info entries (Telegram channel + usage/expiry), shown in EVERY format.
 						// Computed BEFORE conversion so they can be injected into clash/sing-box too (not just
 						// the raw/mixed list). The Telegram line is LOCKED to Nova's official channel
-						// (NOVA_TG_CHANNEL): always first and NOT overridable from panel/env/KV, so a reseller
+						// (frei_NOVA_TG_CHANNEL[6:]): always first and NOT overridable from panel/env/KV, so a reseller
 						// can never remove it or point it elsewhere.
 						let _fakeLines = [];
 						if (bakashatMinuyLakoach) {
@@ -3621,7 +3621,7 @@ export default {
 								.replace('{usage}', `${_usedGB}GB / ${_limitGB}GB (${_pct}%)`)
 								.replace('{expiry}', _expiryDate)
 								.replace('{daily}', _user2 ? String(_user2.dailyQuotaBytes || 0) : '0')
-								.replace('{telegram}', NOVA_TG_CHANNEL);
+								.replace('{telegram}', frei_NOVA_TG_CHANNEL[6:]);
 							const _cfgFakes = (hagdarotReshet && Array.isArray(hagdarotReshet.fakeConfigs)) ? hagdarotReshet.fakeConfigs : [];
 							for (const fc of _cfgFakes) {
 								if (!fc || fc.enabled === false || !fc.name) continue;
@@ -3664,7 +3664,7 @@ export default {
 				// through to the camouflage/decoy page below. Show a clear diagnostic instead.
 				if (nativGisha === 'login' || nativGisha === 'admin' || nativGisha.startsWith('admin/')) {
 					return new Response(
-						'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nova Proxy — KV binding missing</title>'
+						'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frei — KV binding missing</title>'
 						+ '<style>body{font-family:system-ui,Segoe UI,Tahoma,sans-serif;background:#0b0d11;color:#e9edf4;margin:0;display:flex;min-height:100vh;align-items:center;justify-content:center;padding:24px}'
 						+ '.c{max-width:560px;background:#101319;border:1px solid #1c2027;border-radius:16px;padding:28px}h1{font-size:18px;margin:0 0 12px}p{color:#aeb6c4;line-height:1.7;font-size:14px}code{background:#0b0d11;border:1px solid #1c2027;border-radius:5px;padding:1px 6px;color:#22d3ee}</style></head>'
 						+ '<body><div class="c"><h1>Login / Admin unavailable: KV binding missing</h1>'
@@ -3709,7 +3709,7 @@ export default {
 		} catch (error) { await logErrorToKV(env, error, request); }
 		if (nativGisha === 'login' || nativGisha === 'admin' || nativGisha.startsWith('admin/')) {
 			return new Response(
-				'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nova Proxy — route not resolved</title>'
+				'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frei — route not resolved</title>'
 				+ '<style>body{font-family:system-ui,Segoe UI,Tahoma,sans-serif;background:#0b0d11;color:#e9edf4;margin:0;display:flex;min-height:100vh;align-items:center;justify-content:center;padding:24px}'
 				+ '.c{max-width:560px;background:#101319;border:1px solid #1c2027;border-radius:16px;padding:28px}h1{font-size:18px;margin:0 0 12px}p{color:#aeb6c4;line-height:1.7;font-size:14px}code{background:#0b0d11;border:1px solid #1c2027;border-radius:5px;padding:1px 6px;color:#22d3ee}</style></head>'
 				+ '<body><div class="c"><h1>' + '/' + nativGisha + ' did not resolve</h1>'
@@ -3747,7 +3747,7 @@ export default {
 		if (_errPath === '/login' || _errPath === '/admin' || _errPath.startsWith('/admin/')) {
 			const msg = (topLevelError && (topLevelError.stack || topLevelError.message)) || String(topLevelError);
 			return new Response(
-				'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nova Proxy — error</title>'
+				'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frei — error</title>'
 				+ '<style>body{font-family:system-ui,Segoe UI,Tahoma,sans-serif;background:#0b0d11;color:#e9edf4;margin:0;padding:24px}pre{white-space:pre-wrap;word-break:break-word;background:#101319;border:1px solid #1c2027;border-radius:12px;padding:16px;color:#f87171;font-size:13px}</style></head>'
 				+ '<body><h1>Uncaught exception on ' + _errPath + '</h1><p>Shown here (instead of the decoy page) so the real cause is visible:</p><pre>' + msg.replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c])) + '</pre></body></html>',
 				{ status: 500, headers: { 'Content-Type': 'text/html;charset=utf-8', 'Cache-Control': 'no-store' } }
@@ -7585,13 +7585,13 @@ async function peimatLevMerkazit(env) {
 	const id = await MD5MD5('nova-instance:' + host); // Stable, irreversible instance ID
 	let usage = null; try { usage = await usageGet(env, 'usage-m:' + (new Date().getFullYear() + '-' + String(new Date().getMonth() + 1).padStart(2, '0'))); } catch (e) { }
 	try {
-		await fetch(api + '/heartbeat', { method: 'POST', headers: { 'Content-Type': 'application/json', 'User-Agent': 'NovaProxy' }, body: JSON.stringify({ id, host, version: Version, monthTraffic: usage ? usage.total : 0, ts: Date.now() }) });
+		await fetch(api + '/heartbeat', { method: 'POST', headers: { 'Content-Type': 'application/json', 'User-Agent': 'Frei' }, body: JSON.stringify({ id, host, version: Version, monthTraffic: usage ? usage.total : 0, ts: Date.now() }) });
 	} catch (e) { /* best-effort */ }
 }
 async function riaanunHodaot(env) {
 	const { api } = await kabelCentralApi(env); if (!api) return;
 	try {
-		const r = await fetch(api + '/announcement', { headers: { 'User-Agent': 'NovaProxy' } });
+		const r = await fetch(api + '/announcement', { headers: { 'User-Agent': 'Frei' } });
 		if (r.ok) await env.KV.put('announcement.json', await r.text());
 	} catch (e) { /* best-effort */ }
 }
@@ -9092,12 +9092,12 @@ async function logErrorToKV(env, error, request) {
 	} catch (e) { /* ignore KV write errors */ }
 }
 
-// One-time phone-home so novaproxy.online can count how many panels get set up.
+// One-time phone-home so Frei.online can count how many panels get set up.
 // Fires only on the very first password set (see the `adminPassword` guard below),
 // and reports an opaque hash of this panel's host, never the host itself, so the
 // counter can dedupe without learning where the panel lives. Best-effort and
 // bounded, and fully skippable by setting the STATS_OPTOUT env var on the Worker.
-async function novaReportInstall(env, host) {
+async function freiReportInstall(env, host) {
 	try {
 		if (['1', 'true', 'yes'].includes(String(env.STATS_OPTOUT || '').toLowerCase())) return;
 		if (!host) return;
@@ -9106,7 +9106,7 @@ async function novaReportInstall(env, host) {
 		const ctrl = new AbortController();
 		const timer = setTimeout(() => ctrl.abort(), 2500);
 		try {
-			await fetch('https://novaproxy.online/api/stats', {
+			await fetch('https://Frei.online/api/stats', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({ type: 'install', id }),
@@ -9130,7 +9130,7 @@ async function tipulAshafHatkana(request, env, url, adminPassword, encryptionKey
 		try { cronLastTick = parseInt((env.KV && typeof env.KV.get === 'function') ? (await env.KV.get('cron_last_tick')) || '0' : '0') || 0; } catch (e) {}
 		const cronEnabled = !!(env && ['1', 'true'].includes(String(env.ENABLE_CRON || '')));
 		const cronAgoMs = cronLastTick ? (Date.now() - cronLastTick) : -1;
-		return new Response(JSON.stringify({ build: NOVA_BUILD, kv: kvBound, d1: d1, d1Bound: d1Bound, d1Probe: d1Probe, store: d1 ? 'd1' : (kvBound ? 'kv' : 'none'), admin: !!adminPassword, configured: !!(hasStore && adminPassword), cronEnabled: cronEnabled, cronLastTick: cronLastTick, cronAgoMs: cronAgoMs }),
+		return new Response(JSON.stringify({ build: frei_NOVA_BUILD[6:], kv: kvBound, d1: d1, d1Bound: d1Bound, d1Probe: d1Probe, store: d1 ? 'd1' : (kvBound ? 'kv' : 'none'), admin: !!adminPassword, configured: !!(hasStore && adminPassword), cronEnabled: cronEnabled, cronLastTick: cronLastTick, cronAgoMs: cronAgoMs }),
 			{ status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8', 'Cache-Control': 'no-store' } });
 	}
 	if (sub === 'set') {
@@ -9147,7 +9147,7 @@ async function tipulAshafHatkana(request, env, url, adminPassword, encryptionKey
 		} catch (e) { return new Response(JSON.stringify({ error: 'kv_write_failed' }), { status: 500, headers: { 'Content-Type': 'application/json;charset=utf-8' } }); }
 		const headers = { 'Content-Type': 'application/json;charset=utf-8' };
 		try { headers['Set-Cookie'] = `auth=${await makeSessionToken((UA || 'null'), encryptionKey, pass)}; Path=/; HttpOnly; Secure; SameSite=Lax`; } catch (e) {}
-		await novaReportInstall(env, url.host);
+		await freiReportInstall(env, url.host);
 		return new Response(JSON.stringify({ success: true }), { status: 200, headers });
 	}
 	if (sub === 'recover-disguise') {
@@ -9192,7 +9192,7 @@ async function dafMerkazMishtamesh() {
 	try {
 		const base = String(panelOrigin() || '').replace(/\/+$/, '');
 		if (!base || PANEL_PLACEHOLDER.test(base)) return null;
-		const r = await fetch(base + '/user/index.html', { headers: { 'User-Agent': 'NovaProxy' }, cf: { cacheTtl: 300, cacheEverything: true } });
+		const r = await fetch(base + '/user/index.html', { headers: { 'User-Agent': 'Frei' }, cf: { cacheTtl: 300, cacheEverything: true } });
 		if (!r || !r.ok) return null;
 		const html = await r.text();
 		if (!html || html.length < 50) return null;
@@ -9217,7 +9217,7 @@ async function hasagatKovetzBreicha(fileUrl) {
 	if (c && Date.now() - c.at < 1800000) return c.list;
 	let list = [];
 	try {
-		const r = await fetch(fileUrl, { headers: { 'User-Agent': 'NovaProxy' }, cf: { cacheTtl: 1800, cacheEverything: true } });
+		const r = await fetch(fileUrl, { headers: { 'User-Agent': 'Frei' }, cf: { cacheTtl: 1800, cacheEverything: true } });
 		if (r.ok) list = (await saderLeMaarach(await r.text())).map(s => String(s).trim()).filter(s => s && !s.startsWith('#'));
 	} catch (e) {}
 	_poolCache.set(fileUrl, { at: Date.now(), list });
@@ -9366,10 +9366,10 @@ async function yatzerIpAkrai(request, count = 16, portMeyuchad = -1) {
 	const mafilSheiltaParametr = String(url.searchParams.get('cnIspCode') || '').toLowerCase();
 	const zihuiKovetzSapak = ['ct', 'cu', 'cmcc', 'cf'].includes(mafilSheiltaParametr) ? mafilSheiltaParametr : zihuiSapak(request);
 	const mipuiShemSpak = {
-		cmcc: 'Nova Free',
-		cu: 'Nova Free',
-		ct: 'Nova Free',
-		cf: 'Nova Free',
+		cmcc: 'Frei Free',
+		cu: 'Frei Free',
+		ct: 'Frei Free',
+		cf: 'Frei Free',
 	};
 	const cidr_url = zihuiKovetzSapak === 'cf' ? `https://raw.githubusercontent.com/${milonChatimot[1]}/${milonChatimot[1]}/main/CF-CIDR.txt` : `https://raw.githubusercontent.com/${milonChatimot[1]}/${milonChatimot[1]}/main/CF-CIDR/${zihuiKovetzSapak}.txt`;
 	const cfname = mipuiShemSpak[zihuiKovetzSapak] || 'CF official preferred';
@@ -10211,9 +10211,9 @@ async function bnyatHodaatDomain(cfg, env, lang) {
 function tekstTafritRashi(lang) {
 	const P = (fa, en, ru) => lang === 'ru' ? ru : lang === 'fa' ? fa : en;
 	return P(
-		`<b>🛰 به ربات Nova Proxy خوش آمدید</b>\n\n<blockquote>مدیریت پنل از تلگرام:\nدریافت لینک اشتراک، وضعیت، مصرف و تنظیمات</blockquote>\n\nاز دکمه‌های زیر استفاده کنید 👇`,
-		`<b>🛰 Welcome to Nova Proxy Bot</b>\n\n<blockquote>Manage your panel from Telegram:\nGet subscription link, status, usage & settings</blockquote>\n\nUse the buttons below 👇`,
-		`<b>🛰 Добро пожаловать в бот Nova Proxy</b>\n\n<blockquote>Управляйте панелью из Telegram:\nссылка на подписку, статус, трафик и настройки</blockquote>\n\nИспользуйте кнопки ниже 👇`);
+		`<b>🛰 به ربات Frei خوش آمدید</b>\n\n<blockquote>مدیریت پنل از تلگرام:\nدریافت لینک اشتراک، وضعیت، مصرف و تنظیمات</blockquote>\n\nاز دکمه‌های زیر استفاده کنید 👇`,
+		`<b>🛰 Welcome to Frei Bot</b>\n\n<blockquote>Manage your panel from Telegram:\nGet subscription link, status, usage & settings</blockquote>\n\nUse the buttons below 👇`,
+		`<b>🛰 Добро пожаловать в бот Frei</b>\n\n<blockquote>Управляйте панелью из Telegram:\nссылка на подписку, статус, трафик и настройки</blockquote>\n\nИспользуйте кнопки ниже 👇`);
 }
 function mikledetTafritRashiV2(panelUrl, subUrl, lang) {
 	const P = (fa, en, ru) => lang === 'ru' ? ru : lang === 'fa' ? fa : en;
@@ -10539,9 +10539,9 @@ async function tipulTelegramWebhook(request, env, userID, host, encryptionKey = 
 			}
 			case '/help': {
 				const helpText = _btl(_cmdLang, {
-					en: `<b>╔═══❰✨ Nova Proxy Bot ❱═══╗</b>\n\n<blockquote><b>📋 Help</b>\n━━━━━━━━━━━━━━━━━━━\n<code>/sub</code>         ─── Get subscription link\n<code>/status</code>      ─── Worker status & usage\n<code>/config</code>      ─── Show config summary\n<code>/users</code>      ─── Users list\n<code>/stats</code>       ─── System stats\n<code>/logs</code>         ─── Activity logs\n<code>/panic</code>       ─── Panic Mode 🚨\n<code>/sethost</code>    ─── Change host\n<code>/setpath</code>    ─── Change path\n<code>/setname</code>    ─── Change sub name\n<code>/hosts</code>     ─── Domains list\n<code>/addhost</code>   ─── Add domain to pool\n<code>/delhost</code>   ─── Remove domain from pool\n<code>/pause</code>     ─── Pause service\n<code>/resume</code>    ─── Resume service\n<code>/setwebhook</code> ─── Install Webhook\n<code>/install</code>     ─── Install panel on Cloudflare\n<code>/myid</code>       ─── Your Chat ID\n<code>/help</code>       ─── This help</blockquote>\n\n<b>╚══════════════════════╝</b>`,
-					fa: `<b>╔═══❰✨ Nova Proxy Bot ❱═══╗</b>\n\n<blockquote><b>📋 راهنما</b>\n━━━━━━━━━━━━━━━━━━━\n<code>/sub</code>         ─── دریافت لینک اشتراک\n<code>/status</code>      ─── وضعیت ورکر و مصرف\n<code>/config</code>      ─── نمایش خلاصه کانفیگ\n<code>/users</code>      ─── لیست کاربران\n<code>/stats</code>       ─── آمار سیستم\n<code>/logs</code>         ─── لاگ فعالیت\n<code>/panic</code>       ─── حالت پنیک 🚨\n<code>/sethost</code>    ─── تغییر host\n<code>/setpath</code>    ─── تغییر مسیر\n<code>/setname</code>    ─── تغییر نام اشتراک\n<code>/hosts</code>     ─── لیست دامنه‌ها\n<code>/addhost</code>   ─── افزودن دامنه به استخر\n<code>/delhost</code>   ─── حذف دامنه از استخر\n<code>/pause</code>     ─── توقف موقت سرویس\n<code>/resume</code>    ─── ازسرگیری سرویس\n<code>/setwebhook</code> ─── نصب Webhook\n<code>/install</code>     ─── نصب پنل روی Cloudflare\n<code>/myid</code>       ─── Chat ID شما\n<code>/help</code>       ─── این راهنما</blockquote>\n\n<b>╚══════════════════════╝</b>`,
-					ru: `<b>╔═══❰✨ Nova Proxy Bot ❱═══╗</b>\n\n<blockquote><b>📋 Помощь</b>\n━━━━━━━━━━━━━━━━━━━\n<code>/sub</code>         ─── Ссылка на подписку\n<code>/status</code>      ─── Статус воркера и трафик\n<code>/config</code>      ─── Сводка настроек\n<code>/users</code>      ─── Список пользователей\n<code>/stats</code>       ─── Статистика системы\n<code>/logs</code>         ─── Журнал активности\n<code>/panic</code>       ─── Режим паники 🚨\n<code>/sethost</code>    ─── Сменить host\n<code>/setpath</code>    ─── Сменить путь\n<code>/setname</code>    ─── Сменить имя подписки\n<code>/hosts</code>     ─── Список доменов\n<code>/addhost</code>   ─── Добавить домен в пул\n<code>/delhost</code>   ─── Удалить домен из пула\n<code>/pause</code>     ─── Приостановить сервис\n<code>/resume</code>    ─── Возобновить сервис\n<code>/setwebhook</code> ─── Установить Webhook\n<code>/install</code>     ─── Установить панель на Cloudflare\n<code>/myid</code>       ─── Ваш Chat ID\n<code>/help</code>       ─── Эта справка</blockquote>\n\n<b>╚══════════════════════╝</b>`
+					en: `<b>╔═══❰✨ Frei Bot ❱═══╗</b>\n\n<blockquote><b>📋 Help</b>\n━━━━━━━━━━━━━━━━━━━\n<code>/sub</code>         ─── Get subscription link\n<code>/status</code>      ─── Worker status & usage\n<code>/config</code>      ─── Show config summary\n<code>/users</code>      ─── Users list\n<code>/stats</code>       ─── System stats\n<code>/logs</code>         ─── Activity logs\n<code>/panic</code>       ─── Panic Mode 🚨\n<code>/sethost</code>    ─── Change host\n<code>/setpath</code>    ─── Change path\n<code>/setname</code>    ─── Change sub name\n<code>/hosts</code>     ─── Domains list\n<code>/addhost</code>   ─── Add domain to pool\n<code>/delhost</code>   ─── Remove domain from pool\n<code>/pause</code>     ─── Pause service\n<code>/resume</code>    ─── Resume service\n<code>/setwebhook</code> ─── Install Webhook\n<code>/install</code>     ─── Install panel on Cloudflare\n<code>/myid</code>       ─── Your Chat ID\n<code>/help</code>       ─── This help</blockquote>\n\n<b>╚══════════════════════╝</b>`,
+					fa: `<b>╔═══❰✨ Frei Bot ❱═══╗</b>\n\n<blockquote><b>📋 راهنما</b>\n━━━━━━━━━━━━━━━━━━━\n<code>/sub</code>         ─── دریافت لینک اشتراک\n<code>/status</code>      ─── وضعیت ورکر و مصرف\n<code>/config</code>      ─── نمایش خلاصه کانفیگ\n<code>/users</code>      ─── لیست کاربران\n<code>/stats</code>       ─── آمار سیستم\n<code>/logs</code>         ─── لاگ فعالیت\n<code>/panic</code>       ─── حالت پنیک 🚨\n<code>/sethost</code>    ─── تغییر host\n<code>/setpath</code>    ─── تغییر مسیر\n<code>/setname</code>    ─── تغییر نام اشتراک\n<code>/hosts</code>     ─── لیست دامنه‌ها\n<code>/addhost</code>   ─── افزودن دامنه به استخر\n<code>/delhost</code>   ─── حذف دامنه از استخر\n<code>/pause</code>     ─── توقف موقت سرویس\n<code>/resume</code>    ─── ازسرگیری سرویس\n<code>/setwebhook</code> ─── نصب Webhook\n<code>/install</code>     ─── نصب پنل روی Cloudflare\n<code>/myid</code>       ─── Chat ID شما\n<code>/help</code>       ─── این راهنما</blockquote>\n\n<b>╚══════════════════════╝</b>`,
+					ru: `<b>╔═══❰✨ Frei Bot ❱═══╗</b>\n\n<blockquote><b>📋 Помощь</b>\n━━━━━━━━━━━━━━━━━━━\n<code>/sub</code>         ─── Ссылка на подписку\n<code>/status</code>      ─── Статус воркера и трафик\n<code>/config</code>      ─── Сводка настроек\n<code>/users</code>      ─── Список пользователей\n<code>/stats</code>       ─── Статистика системы\n<code>/logs</code>         ─── Журнал активности\n<code>/panic</code>       ─── Режим паники 🚨\n<code>/sethost</code>    ─── Сменить host\n<code>/setpath</code>    ─── Сменить путь\n<code>/setname</code>    ─── Сменить имя подписки\n<code>/hosts</code>     ─── Список доменов\n<code>/addhost</code>   ─── Добавить домен в пул\n<code>/delhost</code>   ─── Удалить домен из пула\n<code>/pause</code>     ─── Приостановить сервис\n<code>/resume</code>    ─── Возобновить сервис\n<code>/setwebhook</code> ─── Установить Webhook\n<code>/install</code>     ─── Установить панель на Cloudflare\n<code>/myid</code>       ─── Ваш Chat ID\n<code>/help</code>       ─── Эта справка</blockquote>\n\n<b>╚══════════════════════╝</b>`
 				});
 				await shlachHodaatBot(TG_JSON.BotToken, chatId, helpText);
 				break;
@@ -10840,8 +10840,8 @@ async function cfDeploy({ token, accountId, scriptName, scriptText, uuid, passwo
 }
 
 async function runCfInstall(env, botToken, chatId, host, request) {
-	const a = ['https://', 'raw.', 'githubusercontent', '.com/', 'IRNova/', 'Nova-Proxy/', 'main/', 'version.json'].join('');
-	const b = ['https://', 'raw.', 'githubusercontent', '.com/', 'IRNova/', 'Nova-Proxy/', 'main/', 'worker.js'].join('');
+	const a = ['https://', 'raw.', 'githubusercontent', '.com/', 'IRNova/', 'Frei/', 'main/', 'version.json'].join('');
+	const b = ['https://', 'raw.', 'githubusercontent', '.com/', 'IRNova/', 'Frei/', 'main/', 'worker.js'].join('');
 	const st = cfInstallGet(chatId);
 	if (!st || !st.token) { try { await sendBotMessage(botToken, chatId, 'نشست منقضی شد. دوباره از منو «نصب پنل» شروع کنید.'); } catch (e) {} return new Response('OK', { status: 200 }); }
 	let lastMsgId = null;
@@ -11035,7 +11035,7 @@ async function publishSubMirror(env, baseUrl, userID, opts = {}) {
 		if (!_mirrorHost) _mirrorHost = baseUrl.replace(/^https?:\/\//, '').split('/')[0].split(':')[0];
 		const _subToken = await MD5MD5(_mirrorHost + _uid);
 		const results = [];
-		let _selfProbe; try { const _pv = await fetch(`${baseUrl}/version`, { headers: { 'User-Agent': 'NovaMirror/1.0' } }); _selfProbe = _pv.status; } catch (e) { _selfProbe = 'err:' + (e && e.message); }
+		let _selfProbe; try { const _pv = await fetch(`${baseUrl}/version`, { headers: { 'User-Agent': 'freiMirror/1.0' } }); _selfProbe = _pv.status; } catch (e) { _selfProbe = 'err:' + (e && e.message); }
 		const files = [
 			{ name: 'base64.txt', q: 'b64' },
 			{ name: 'mihomo.yaml', q: 'clash' },
@@ -11045,7 +11045,7 @@ async function publishSubMirror(env, baseUrl, userID, opts = {}) {
 			try {
 				// Stage 1: fetch our own sub over HTTP. Diagnostic build: also probing /version (worker->self, no token)
 				// separately to learn whether worker-to-self subrequests work at all on this deploy.
-				const r = await fetch(`${baseUrl}/sub?token=${_subToken}&${f.q}`, { headers: { 'User-Agent': 'NovaMirror/1.0' } });
+				const r = await fetch(`${baseUrl}/sub?token=${_subToken}&${f.q}`, { headers: { 'User-Agent': 'freiMirror/1.0' } });
 				if (!r.ok) { results.push({ file: f.name, ok: false, stage: 'sub-fetch', status: r.status }); continue; }
 				const content = await r.text();
 				if (!content || content.length < 8) { results.push({ file: f.name, ok: false, stage: 'sub-fetch', error: 'empty response' }); continue; }
@@ -11053,12 +11053,12 @@ async function publishSubMirror(env, baseUrl, userID, opts = {}) {
 				// can't write to it. GitHub's message ("Not Found" / "Branch ... not found") pinpoints it.
 				const path = (_pathPrefix ? _pathPrefix + '/' : '') + f.name;
 				const putUrl = `https://api.github.com/repos/${_repo}/contents/${path}`;
-				const existing = await fetch(putUrl, { headers: { 'Authorization': 'token ' + _token, 'User-Agent': 'NovaMirror' } });
+				const existing = await fetch(putUrl, { headers: { 'Authorization': 'token ' + _token, 'User-Agent': 'freiMirror' } });
 				const existingJson = await existing.json().catch(() => ({}));
 				const sha = existingJson && existingJson.sha ? existingJson.sha : undefined;
 				const body = { message: `Nova: update ${f.name}`, content: btoa(unescape(encodeURIComponent(content))), branch: _branch };
 				if (sha) body.sha = sha;
-				const put = await fetch(putUrl, { method: 'PUT', headers: { 'Authorization': 'token ' + _token, 'Content-Type': 'application/json', 'User-Agent': 'NovaMirror' }, body: JSON.stringify(body) });
+				const put = await fetch(putUrl, { method: 'PUT', headers: { 'Authorization': 'token ' + _token, 'Content-Type': 'application/json', 'User-Agent': 'freiMirror' }, body: JSON.stringify(body) });
 				let ghMsg;
 				if (!put.ok) { try { const _pj = await put.json(); ghMsg = _pj && _pj.message; } catch (e) {} }
 				results.push({ file: f.name, ok: put.ok, status: put.status, stage: 'github', repo: _repo, branch: _branch, ...(ghMsg ? { githubMessage: ghMsg } : {}) });
@@ -11094,12 +11094,12 @@ async function publishMirrorContent(env, contentMap, opts = {}) {
 			try {
 				const path = (_pathPrefix ? _pathPrefix + '/' : '') + name;
 				const putUrl = `https://api.github.com/repos/${_repo}/contents/${path}`;
-				const existing = await fetch(putUrl, { headers: { 'Authorization': 'token ' + _token, 'User-Agent': 'NovaMirror' } });
+				const existing = await fetch(putUrl, { headers: { 'Authorization': 'token ' + _token, 'User-Agent': 'freiMirror' } });
 				const existingJson = await existing.json().catch(() => ({}));
 				const sha = existingJson && existingJson.sha ? existingJson.sha : undefined;
 				const body = { message: `Nova: update ${name}`, content: btoa(unescape(encodeURIComponent(content))), branch: _branch };
 				if (sha) body.sha = sha;
-				const put = await fetch(putUrl, { method: 'PUT', headers: { 'Authorization': 'token ' + _token, 'Content-Type': 'application/json', 'User-Agent': 'NovaMirror' }, body: JSON.stringify(body) });
+				const put = await fetch(putUrl, { method: 'PUT', headers: { 'Authorization': 'token ' + _token, 'Content-Type': 'application/json', 'User-Agent': 'freiMirror' }, body: JSON.stringify(body) });
 				let ghMsg; if (!put.ok) { try { const _pj = await put.json(); ghMsg = _pj && _pj.message; } catch (e) {} }
 				results.push({ file: name, ok: put.ok, status: put.status, stage: 'github', repo: _repo, branch: _branch, ...(ghMsg ? { githubMessage: ghMsg } : {}) });
 			} catch (e) { results.push({ file: name, ok: false, error: e.message }); }
@@ -11162,9 +11162,9 @@ function novaInjectFakeSingbox(jsonText, lines, uuid, host) {
 	} catch (e) { return jsonText; }
 }
 
-//////////////////////////////////////////////////////Nova Radar/Scan Page///////////////////////////////////////////////
-function novaScanPage() {
-	const html = `<!DOCTYPE html><html lang="fa" dir="rtl" data-theme="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nova Radar</title><style>
+//////////////////////////////////////////////////////Frei Radar/Scan Page///////////////////////////////////////////////
+function freiScanPage() {
+	const html = `<!DOCTYPE html><html lang="fa" dir="rtl" data-theme="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frei Radar</title><style>
 :root{--bg:#070809;--panel:#0c0e12;--card:#101319;--card2:#0b0d11;--bd:#1c2027;--bd2:#262b34;--tx:#e9edf4;--tx2:#aeb6c4;--mu:#6f7888;--ac:#22d3ee;--ac2:#a855f7;--ok:#34d399;--wn:#f5b042;--dg:#f87171;--grad:linear-gradient(120deg,#22d3ee,#7c5cff);--r:12px;--rs:9px;--ac-soft:color-mix(in srgb,var(--ac) 14%,transparent);--ac-line:color-mix(in srgb,var(--ac) 38%,transparent)}
 html[data-theme=light]{--bg:#f4f6fb;--panel:#fff;--card:#fff;--card2:#f7f9fc;--bd:#e6eaf1;--bd2:#dde2eb;--tx:#101622;--tx2:#3a465c;--mu:#5f6a7d;--ac:#0ea5c4;--ac2:#7c3aed;--grad:linear-gradient(120deg,#0891b2,#7c3aed);--ok:#047857;--wn:#b45309;--dg:#dc2626}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -11214,7 +11214,7 @@ tr.best td{background:var(--ac-soft)}
 .toast.show{opacity:1;transform:none}
 </style></head><body><div class="wrap">
 <header class="topbar">
-<div class="brand"><div><div class="name">Nova Radar</div><div class="env"><span class="d"></span>clean-IP scanner</div></div></div>
+<div class="brand"><div><div class="name">Frei Radar</div><div class="env"><span class="d"></span>clean-IP scanner</div></div></div>
 <div style="margin-inline-start:auto;display:flex;gap:8px"><div class="seg" id="lang"><button data-l="en">EN</button><button data-l="fa">فا</button><button data-l="ru">РУ</button></div><div class="seg" id="theme"><button data-t="light">&#9728;</button><button data-t="dark">&#9790;</button></div></div>
 </header>
 <div class="card hero">
@@ -11453,7 +11453,7 @@ function haimNativMenutakBackend(nativGisha, pathname) {
 	const p = (nativGisha || '').toLowerCase();
 	const pn = (pathname || '').toLowerCase();
 	if (p === 'dns-query' || p === 'doh' || pn === '/dns-query' || pn === '/doh') return true;
-	if (p === 'login' || p === 'bot' || p === 'setwebhook' || p === 'version' || p === 'nova-block' || p === 'locations' || p === 'robots.txt') return true;
+	if (p === 'login' || p === 'bot' || p === 'setwebhook' || p === 'version' || p === 'frei-block' || p === 'locations' || p === 'robots.txt') return true;
 	if (p === 'sub' || p.startsWith('sub/') || p === 'warp' || p.startsWith('warp/') || p === 'install' || p.startsWith('install/')) return true;
 	if (p === 'admin' || p.startsWith('admin/')) return true;
 	return false;
